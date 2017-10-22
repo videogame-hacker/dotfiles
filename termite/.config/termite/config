@@ -1,0 +1,48 @@
+[options]
+font = Hack 9.5
+audible_bell = false
+visible_bell = false
+clickable_url = true
+urgent_on_bell = false
+dynamic_title = true
+cursor_shape = ibeam
+
+[colors]
+
+# special
+foreground      = #ffffff
+foreground_bold = #ffffff
+cursor          = #ffffff
+background      = #2f343f
+
+# black
+color0  = #4d4d4d
+color8  = #696969
+
+# red
+color1  = #e84f4f
+color9  = #d23d3d
+
+# green
+color2  = #b8d68c
+color10 = #a0cf5d
+
+# yellow
+color3  = #e1aa5d
+color11 = #f39d21
+
+# blue
+color4  = #5da6e9
+color12 = #52a7de
+
+# magenta
+color5  = #f0b5fd
+color13 = #e09bfb
+
+# cyan
+color6  = #adeafa
+color14 = #7dd0f8
+
+# white
+color7  = #dddddd
+color15 = #dddddd

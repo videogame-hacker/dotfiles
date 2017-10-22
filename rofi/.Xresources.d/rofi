@@ -1,0 +1,16 @@
+! rofi -fullscreen -width 80 -font "Liberation Sans 36" -show run -fuzzy -threads 0 -color-normal "#00000000,#ffffff,#00000000,#00000000,#239aff" -color-window "#9A222222,#9A222222" -padding 100
+rofi.font: Source Sans Pro 36
+
+rofi.width: 100
+rofi.padding: 350
+rofi.sidebar-mode: true
+rofi.modi: window,run
+rofi.separator-style: solid
+rofi.fullscreen: true
+rofi.opacity: 80
+
+rofi.color-normal: #00000000, #ffffff, #00000000, #00000000, #9a74ff
+rofi.color-window: #C4363636,#C4363636
+
+rofi.hide-scrollbar: true
+rofi.scroll-method: 1

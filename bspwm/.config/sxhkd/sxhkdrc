@@ -1,0 +1,93 @@
+#
+# sxhkd hotkeys
+#
+super + Escape
+	pkill -USR1 -x sxhkd
+
+
+#
+# bspwm hotkeys
+#
+
+# logout
+super + ctrl + Escape
+    bspc quit
+
+# close, kill window
+super + shift + {_,ctrl + }q
+    bspc node -{c,k}
+
+# tiled <--> monocle toggle
+super + m
+    bspc desktop -l next
+
+# swap current and biggest
+super + g
+    bspc node -s biggest
+
+# window mode
+super + {t,shift + t,s,f}
+    bspc node -t {tiled,psuedo_tiled,floating,fullscreen}
+
+# node flags
+super + ctrl + {x,y,z}
+    bspc node -g {locked,sticky,private}
+
+# select or move window
+super + {_,shift + }{Left,Down,Up,Right}
+    bspc node -{f,s} {west,south,north,east}
+
+# preselect direction
+super + ctrl + {Left,Down,Up,Right}
+    bspc node -p {west,south,north,east}
+
+# path jump
+super + {p,b,comma,period}
+	bspc node -f @{parent,brother,first,second}
+
+# focus next/previous window
+super + {_,shift + }c
+	bspc node -f {next,prev}.local
+
+# focus next/previous workspace
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+# focus last window/workspace
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# focus/move window to workspace 1-10
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# set split ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel preselection
+super + ctrl + space
+	bspc node -p cancel
+
+# resize out
+super + alt + {Left,Down,Up,Right}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# resize in
+super + alt + shift + {Left,Down,Up,Right}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+#
+# program hotkeys
+#
+super + Return
+    termite
+
+super + d
+    rofi -show run
+
+Print
+    hackery-screenshot.sh
+
+super + e
+    nemo
