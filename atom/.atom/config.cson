@@ -1,0 +1,9 @@
+"*":
+  core:
+    autoHideMenuBar: true
+    themes: [
+      "pristine-ui"
+      "pure-syntax"
+    ]
+  "exception-reporting":
+    userId: "e9d6e350-35ad-48c3-88eb-b3856f377d53"
