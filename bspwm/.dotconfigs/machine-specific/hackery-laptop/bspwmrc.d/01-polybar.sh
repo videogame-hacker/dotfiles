@@ -1,1 +1,1 @@
-_common/launch-polybar.sh
+../../_common/launch-polybar.sh
