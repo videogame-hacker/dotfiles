@@ -1,6 +1,7 @@
 "*":
   core:
     autoHideMenuBar: true
+    telemetryConsent: "no"
     themes: [
       "pristine-ui"
       "pure-syntax"
