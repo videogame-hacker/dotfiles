@@ -1,0 +1,95 @@
+[colors]
+bg = #2f343f
+fg = #eeeeee
+
+[bar/top]
+wm-name = bar_top
+width = 1366
+height = 20
+
+font-0 = Liberation Sans:size=9;2
+font-1 = FontAwesome:size=9;2
+
+offset-x = 0
+offset-y = 2
+
+background = #00000000
+foreground = #eeeeee
+
+line-size = 2
+line-color = #e6d3dae3
+
+module-margin-left = 0
+module-margin-right = 0
+
+fixed-center = true
+
+modules-left = date xwindow
+modules-center = bspwm
+modules-right = volume
+
+tray-position = right
+tray-offset-y = -1
+tray-offset-x = 0
+tray-maxsize = 16
+tray-padding = 2
+
+wm-restack = bspwm
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+
+[module/volume]
+type = internal/volume
+format-volume = <ramp-volume>
+format-muted = <label-muted>
+label-volume = %percentage%
+label-muted =   muted
+label-muted-foreground = #aaa
+format-volume-padding = 1
+format-muted-padding = 1
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-headphones-0 = 
+
+
+[module/bspwm]
+type = internal/bspwm
+format = <label-state> <label-mode>
+
+label-focused = 
+label-focused-padding = 2
+
+label-occupied = 
+label-occupied-padding = 2
+
+label-urgent = 
+label-urgent-foreground = #ffd02646
+label-urgent-padding = 2
+
+label-empty = 
+label-empty-foreground = #44ffffff
+label-empty-padding = 2
+
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:60:...%
+label-padding = 4
+
+
+[module/date]
+type = internal/date
+interval = 1.0
+
+date = %a. %b. %d,
+time = %H:%M
+
+date-alt = %A, %d %B %Y
+time-alt = %H:%M:%S
+
+label = %date% %time%
+format = <label>
+format-padding = 3

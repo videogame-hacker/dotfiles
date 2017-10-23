@@ -12,7 +12,10 @@ bspc config gapless_monocle true
 bspc config click_to_focus true
 bspc config focus_follows_pointer false
 
-source ~/.config/bspwm/bspwmrc.d/*
+for f in ~/.config/bspwm/bspwmrc.d/*
+do
+  source "$f"
+done
 
 if [ -d ~/.dotconfigs/machine-specific/$(hostname)/bspwmrc.d/ ]
 then
@@ -23,5 +26,4 @@ then
 fi
 
 SXHKD_SHELL="/usr/bin/dash" sxhkd &
-polybar top &
 compton &
