@@ -3,4 +3,4 @@
 discord-canary &
 nm-applet &
 syncthing-gtk &
-run_keybase &
+KEYBASE_START_UI=hideWindow run_keybase &
