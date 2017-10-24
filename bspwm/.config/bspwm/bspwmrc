@@ -27,4 +27,4 @@ then
     done
 fi
 
-compton &
+compton --shadow-exclude 'argb && (override_redirect || wmwin)' &
