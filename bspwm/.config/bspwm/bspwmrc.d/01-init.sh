@@ -1,4 +1,4 @@
 #!/usr/bin/sh
 
-setxkbmap gb
+setxkbmap gb -option compose:ralt
 feh --randomize --bg-fill ~/.wallpapers
