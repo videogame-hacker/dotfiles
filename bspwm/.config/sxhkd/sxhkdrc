@@ -49,6 +49,9 @@ super + {p,b,comma,period}
 super + {_,shift + }c
 	bspc node -f {next,prev}.local
 
+alt + {_,shift + }Tab
+	bspc node -f {next,prev}.local
+
 # focus next/previous workspace
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
