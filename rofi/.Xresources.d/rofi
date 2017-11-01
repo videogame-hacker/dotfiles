@@ -1,5 +1,5 @@
 ! rofi -fullscreen -width 80 -font "Liberation Sans 36" -show run -fuzzy -threads 0 -color-normal "#00000000,#ffffff,#00000000,#00000000,#239aff" -color-window "#9A222222,#9A222222" -padding 100
-rofi.font: Source Sans Pro 24
+rofi.font: Source Sans Pro Light 24
 
 rofi.width: 80
 rofi.padding: 20
