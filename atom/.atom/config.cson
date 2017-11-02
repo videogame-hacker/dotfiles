@@ -8,5 +8,7 @@
     ]
   "exception-reporting":
     userId: "e9d6e350-35ad-48c3-88eb-b3856f377d53"
+  "tree-view":
+    autoReveal: true
   welcome:
     showOnStartup: false
