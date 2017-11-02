@@ -17,5 +17,10 @@ $
 $ # Install a different set.
 $ stow rofi
 $ stow termite
-$ # et cetera.
+$
+$ cd root/
+root/ $ sudo stow -t / jdk-environ
+root/ $ # et cetera.
 ```
+
+**Folders in the `root/` directory should be stowed with `stow -t / <folder>`.**
