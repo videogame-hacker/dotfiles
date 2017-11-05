@@ -2,9 +2,10 @@
 font = Source Sans Pro Light 12
 show_indicators = no
 shrink = yes
-geometry = "410x24-12+12"
+geometry = "410x128-12+12"
+max_icon_size = 128
 
-icon_position = off
+icon_position = left
 # <b>bold</b>
 # <i>italic</i>
 # <s>strikethrough<s/>
