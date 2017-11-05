@@ -5,7 +5,7 @@ shrink = yes
 geometry = "410x128-12+12"
 max_icon_size = 128
 
-icon_position = left
+icon_position = off
 # <b>bold</b>
 # <i>italic</i>
 # <s>strikethrough<s/>
