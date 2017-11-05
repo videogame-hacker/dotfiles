@@ -14,3 +14,8 @@ rofi.color-window: #C4363636,#C4363636
 
 rofi.hide-scrollbar: true
 rofi.scroll-method: 1
+
+rofi.matching: fuzzy
+rofi.levenshtein-sort: true
+
+rofi.show-match: false
