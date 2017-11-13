@@ -27,4 +27,4 @@ then
     done
 fi
 
-compton --shadow-exclude 'argb && (override_redirect || wmwin)' &
+compton --config ~/.config/compton.conf &
