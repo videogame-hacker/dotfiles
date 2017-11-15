@@ -1,5 +1,5 @@
 [options]
-font = Hack 9.5
+font = Fira Mono 9.5
 audible_bell = false
 visible_bell = false
 clickable_url = true
