@@ -6,6 +6,8 @@
       "pristine-ui"
       "an-old-hope-syntax"
     ]
+  editor:
+    fontFamily: "Fira Mono"
   "exception-reporting":
     userId: "e9d6e350-35ad-48c3-88eb-b3856f377d53"
   "tree-view":

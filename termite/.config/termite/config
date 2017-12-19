@@ -10,39 +10,42 @@ cursor_shape = ibeam
 [colors]
 
 # special
-foreground      = #d9d8d8
-foreground_bold = #d9d8d8
-cursor          = #d9d8d8
-background      = #231f20
+foreground      = #ebece6
+foreground_bold = #ebece6
+cursor          = #ebece6
+background      = #1a1a1a
 
 # black
-color0  = #231f20
-color8  = #737171
+color0  = #000000
+color8  = #555555
 
 # red
-color1  = #ee2e24
-color9  = #ee2e24
+color1  = #fb4245
+color9  = #fb4245
 
 # green
-color2  = #2adb7d
-color10 = #2adb7d
+color2  = #50fa7b
+color10 = #50fa7b
 
 # yellow
-color3  = #eef252
-color11 = #eef252
+color3  = #f0fa8b
+color11 = #f0fa8b
 
 # blue
-color4  = #009ddc
-color12 = #009ddc
+color4  = #49b9fe
+color12 = #49b9fe
 
 # magenta
-color5  = #ef6dbd
-color13 = #ef6dbd
+color5  = #fb4cb3
+color13 = #fb4cb3
 
 # cyan
-color6  = #85cebc
-color14 = #85cebc
+color6  = #8be9fd
+color14 = #8be9fd
 
 # white
-color7  = #d9d8d8
-color15 = #ffffff
+color7  = #ededec
+color15 = #ededec
+
+# If unset, will reverse foreground and background
+highlight = #2f2f2f

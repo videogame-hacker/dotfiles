@@ -1,8 +1,8 @@
 _prompt_color() {
     if [[ -n $SSH_CONNECTION ]]; then
-        echo "039"
+        echo "cyan"
     else
-        echo "042"
+        echo "green"
     fi
 }
 
