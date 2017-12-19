@@ -48,4 +48,4 @@ color7  = #ededec
 color15 = #ededec
 
 # If unset, will reverse foreground and background
-highlight = #2f2f2f
+highlight = #2d2d3a

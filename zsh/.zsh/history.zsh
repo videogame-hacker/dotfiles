@@ -5,6 +5,8 @@ fi
 HISTSIZE=10000
 SAVEHIST=10000
 
+HIST_STAMPS="yyyy-mm-dd"
+
 # Show history
 case $HIST_STAMPS in
   "mm/dd/yyyy") alias history='fc -fl 1' ;;

@@ -12,9 +12,11 @@ setopt interactivecomments
 
 source ~/.zsh/history.zsh
 source ~/.zsh/completion.zsh
-source ~/.zsh/appearance.zsh
-source ~/.zsh/prompt.zsh
 source ~/.zsh/safe-paste.zsh
 source ~/.zsh/keybindings.zsh
 source ~/.zsh/title.zsh
+source ~/.zsh/config.zsh
+source ~/.zsh/linux-tty.zsh
+source ~/.zsh/appearance.zsh
+source ~/.zsh/prompt.zsh
 source ~/.zsh/environment.zsh
