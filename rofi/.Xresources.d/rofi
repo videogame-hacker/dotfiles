@@ -16,8 +16,8 @@ rofi.color-enabled: true
 rofi.color-window:  #1e1f28, #abacf6, #1e1f28
 
 ! Property Name     BG       FG       BG-alt   Head-BG  Head-FG
-rofi.color-normal:  #1e1f28, #60b1c6, #1e1f28, #1e1f28, #ebece6
-rofi.color-active:  #1e1f28, #60b1c6, #1e1f28, #60b1c6, #ebece6
-rofi.color-urgent:  #1e1f28, #60b1c6, #1e1f28, #1e1f28, #ebece6
+rofi.color-normal:  #1e1f28, #abacf6, #1e1f28, #1e1f28, #ebece6
+rofi.color-active:  #1e1f28, #abacf6, #1e1f28, #abacf6, #ebece6
+rofi.color-urgent:  #1e1f28, #abacf6, #1e1f28, #1e1f28, #ebece6
 
 rofi.separator-style: solid
