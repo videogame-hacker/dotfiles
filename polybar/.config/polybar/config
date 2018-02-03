@@ -4,13 +4,13 @@ fg = #eeeeee
 
 [bar/top]
 wm-name = bar_top
-width = 1920
+width = 100%
 height = 20
 
 font-0 = Liberation Sans:size=9;2
 font-1 = FontAwesome:size=9;2
 
-monitor = DVI-I-1
+monitor = ${env:MONITOR}
 
 offset-x = 0
 offset-y = 2
@@ -28,7 +28,7 @@ fixed-center = true
 
 modules-left = date xwindow
 modules-center = bspwm
-modules-right = volume
+modules-right = backlight battery volume
 
 tray-position = right
 tray-offset-y = -1
@@ -43,18 +43,12 @@ scroll-down = bspwm-deskprev
 
 [module/volume]
 type = internal/volume
-format-volume = <ramp-volume>
-format-muted = <label-muted>
-label-volume = %percentage%
-label-muted =   muted
+format-volume = <label-volume>  <ramp-volume>
+format-muted = 0%  
 label-muted-foreground = #aaa
-format-volume-padding = 1
-format-muted-padding = 1
-
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
-ramp-headphones-0 = 
 
 
 [module/bspwm]
@@ -86,7 +80,7 @@ label-padding = 4
 type = internal/date
 interval = 1.0
 
-date = %a. %b. %d,
+date = %A %d %B
 time = %H:%M
 
 date-alt = %A, %d %B %Y
@@ -95,3 +89,22 @@ time-alt = %H:%M:%S
 label = %date% %time%
 format = <label>
 format-padding = 3
+
+
+[module/backlight]
+type = internal/xbacklight
+label = %percentage%% 
+
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = ADP1
+poll-interval = 0
+format-discharging = <label-discharging>  <ramp-capacity>
+format-full = <label-full>  <ramp-capacity>
+format-charging = <label-charging>  <ramp-capacity>  
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
