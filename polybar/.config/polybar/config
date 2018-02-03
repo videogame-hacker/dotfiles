@@ -80,13 +80,13 @@ label-padding = 4
 type = internal/date
 interval = 1.0
 
-date = %A %d %B
+date = %a %d %b
 time = %H:%M
 
 date-alt = %A, %d %B %Y
 time-alt = %H:%M:%S
 
-label = %date% %time%
+label = %date% - %time%
 format = <label>
 format-padding = 3
 
