@@ -43,7 +43,7 @@ scroll-down = bspwm-deskprev
 
 [module/volume]
 type = internal/volume
-format-volume = <label-volume>  <ramp-volume>
+format-volume = <label-volume> <ramp-volume>
 format-muted = 0%  
 label-muted-foreground = #aaa
 ramp-volume-0 = 

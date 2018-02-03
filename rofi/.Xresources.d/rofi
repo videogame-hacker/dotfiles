@@ -1,5 +1,3 @@
-! rofi -fullscreen -width 80 -font "Liberation Sans 36" -show run -fuzzy -threads 0 -color-normal "#00000000,#ffffff,#00000000,#00000000,#239aff" -color-window "#9A222222,#9A222222" -padding 100
-! rofi.font: Source Sans Pro Light 24
 rofi.font: Roboto Light 18
 rofi.lines: 6
 
@@ -12,4 +10,14 @@ rofi.matching: fuzzy
 rofi.levenshtein-sort: true
 
 rofi.show-match: false
-rofi.theme: /usr/share/rofi/themes/android_notification.rasi
+
+
+rofi.color-enabled: true
+rofi.color-window:  #1e1f28, #abacf6, #1e1f28
+
+! Property Name     BG       FG       BG-alt   Head-BG  Head-FG
+rofi.color-normal:  #1e1f28, #60b1c6, #1e1f28, #1e1f28, #ebece6
+rofi.color-active:  #1e1f28, #60b1c6, #1e1f28, #60b1c6, #ebece6
+rofi.color-urgent:  #1e1f28, #60b1c6, #1e1f28, #1e1f28, #ebece6
+
+rofi.separator-style: solid
