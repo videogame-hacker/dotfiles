@@ -14,10 +14,11 @@ done
 
 bspc config split_ratio 0.5
 bspc config borderless_monocle true
-bspc config gapless_monocle true
+bspc config gapless_monocle false
 
 bspc config click_to_focus any
-bspc config focus_follows_pointer false
+bspc config focus_follows_pointer true
+bspc config pointer_follows_focus true
 
 for f in ~/.config/bspwm/bspwmrc.d/*
 do
