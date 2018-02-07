@@ -17,8 +17,8 @@ module-margin-right = 0
 
 height = 20
 
-font-0 = Source Sans Pro:size=9;2
-font-1 = FontAwesome:size=9;2
+font-0 = Source Sans Pro:size=9;3
+font-1 = FontAwesome:size=9;3
 
 monitor = ${env:MONITOR}
 
