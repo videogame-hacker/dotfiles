@@ -17,8 +17,8 @@ module-margin-right = 0
 
 height = 20
 
-font-0 = Source Sans Pro:size=9;2
-font-1 = FontAwesome:size=9;2
+font-0 = Source Sans Pro:size=9;3
+font-1 = FontAwesome:size=9;3
 
 monitor = ${env:MONITOR}
 
@@ -87,7 +87,7 @@ content-foreground = #00000000
 [module/battery]
 type = internal/battery
 
-full-at = 99
+full-at = 95
 
 battery = BAT0
 adapter = AC0
@@ -97,9 +97,9 @@ poll-interval = 5
 format-charging = <animation-charging>  <label-charging>
 format-discharging = <ramp-capacity>  <label-discharging>
 format-full = <ramp-capacity>  <label-full>
-label-charging = %percentage%
-label-discharging = %percentage%
-label-full = %percentage%
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full = %percentage%%
 format-charging-padding = 3
 format-discharging-padding = 3
 format-full-padding = 3
