@@ -17,8 +17,8 @@ bspc config borderless_monocle true
 bspc config gapless_monocle false
 
 bspc config click_to_focus any
-bspc config focus_follows_pointer true
-bspc config pointer_follows_focus true
+bspc config focus_follows_pointer false
+bspc config pointer_follows_focus false
 
 for f in ~/.config/bspwm/bspwmrc.d/*
 do
