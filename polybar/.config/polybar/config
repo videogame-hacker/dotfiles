@@ -1,29 +1,29 @@
 [bar/top]
-width = 98%
-offset-x = 1%
-offset-y = 3
+width = 100%
+offset-x = 0
+offset-y = 0
 
-background = #00000000
-foreground = #eee
+background = #1e1f28
+foreground = #ebece6
 
 underline-size = 1
 underline-color = #eee
 
 spacing = 1
-padding-left = 0
+padding-left = 5%
 padding-right = 0
-module-margin-left = 0
-module-margin-right = 0
+module-margin-left = 1
+module-margin-right = 1
 
-height = 20
+height = 28
 
-font-0 = Source Sans Pro:size=9;3
-font-1 = FontAwesome:size=9;3
+font-0 = Source Sans Pro:size=9;2
+font-1 = FontAwesome:size=9;2
 
 monitor = ${env:MONITOR}
 
-modules-left = bspwm xwindow
-modules-center =
+modules-left = bspwm
+modules-center = xwindow
 modules-right = battery volume date
 
 tray-position = right
@@ -75,13 +75,13 @@ date-alt = %A, %d %B %Y
 time-alt = %H:%M:%S
 
 label = %date% %time%
-format =    <label>
+format =   <label>
 format-padding = 3
 
 [module/padding]
 type = custom/text
-content =
-content-foreground = #00000000
+content = |
+content-padding = 4
 
 
 [module/battery]

@@ -1,6 +1,7 @@
 #!/usr/bin/sh
 
 SXHKD_SHELL="/usr/bin/dash" sxhkd &
+xsetroot -cursor_name left_ptr
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
