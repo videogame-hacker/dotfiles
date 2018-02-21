@@ -3,7 +3,7 @@ width = 100%
 offset-x = 0
 offset-y = 0
 
-background = #1e1f28
+background = #001e1f28
 foreground = #ebece6
 
 underline-size = 1
