@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/bin/sh
 
 if ! which antibody &> /dev/null
 then
