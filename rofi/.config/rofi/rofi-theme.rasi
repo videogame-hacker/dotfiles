@@ -20,7 +20,7 @@
 
 #listview {
     spacing: 0;
-    scrollbar: true;
+    scrollbar: false;
     margin: 0;
     dynamic: true;
 }
