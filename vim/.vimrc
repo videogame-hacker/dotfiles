@@ -7,7 +7,6 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'lilydjwg/colorizer'
-Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'w0ng/vim-hybrid'
 
@@ -21,7 +20,7 @@ set softtabstop=4
 
 syntax on
 
-" autocmd ColorScheme * highlight! Normal ctermbg=NONE guibg=NONE
+autocmd ColorScheme * highlight! Normal ctermbg=NONE guibg=NONE
 
 set background=dark
 
