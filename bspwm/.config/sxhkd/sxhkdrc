@@ -76,7 +76,7 @@ super + Return
     termite
 
 super + d
-    rofi -show run
+    rofi -show drun
 
 Print
     hackery-screenshot.sh
