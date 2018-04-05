@@ -73,7 +73,7 @@ super + alt + {Left,Down,Up,Right}
 # program hotkeys
 #
 super + Return
-    termite
+    alacritty
 
 super + d
     rofi -show drun
