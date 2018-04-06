@@ -5,11 +5,7 @@ PATH="$NPM_PACKAGES/bin:$PATH"
 # Source environment for nvm if installed
 if [ -f "/usr/share/nvm/init-nvm.sh" ]
 then
-    lazy_source () {
-        eval "$1 () { [ -f $2 ] && source $2 && $1 \$@ }"
-    }
-    
-    lazy_source nvm /usr/share/nvm/init-nvm.sh
+    nvm () { source /usr/share/nvm/init-nvm.sh && nvm $@ }
 fi
 
 # Editor and pager
