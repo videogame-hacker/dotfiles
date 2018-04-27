@@ -1,40 +1,35 @@
 [bar/top]
-width = 100%
-offset-x = 0
-offset-y = 0
-
-background = #001e1f28
-foreground = #ebece6
-
-underline-size = 1
-underline-color = #eee
-
-spacing = 1
-padding-left = 5%
-padding-right = 0
-module-margin-left = 1
-module-margin-right = 1
-
-height = 28
-
-font-0 = Source Sans Pro:size=9;2
-font-1 = FontAwesome:size=9;2
-
 monitor = ${env:MONITOR}
-
-modules-left = bspwm
-modules-center = xwindow
-modules-right = battery volume date
-
-tray-position = right
-tray-padding = 2
 
 wm-restack = bspwm
 
-scroll-up = bspwm-desknext
-scroll-down = bspwm-deskprev
+width = 98%
+height = 32
+offset-x = 1%
+offset-y = 1%
 
-; MODULES
+background = #ff1e1f28
+foreground = #ebece6
+
+border-size = 1
+border-color = #32ebece6
+
+spacing = 6
+
+padding-left = 4%
+padding-right = 4%
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = Source Sans Pro:size=9;2
+font-1 = FontAwesome:size=9;2
+font-2 = EmojiOne Color:size=9;2
+font-3 = Source Han Sans KR:size=9;2
+
+modules-left = bspwm
+modules-right = keyboard network-wired volume backlight date
+
+tray-position = right
 
 [module/bspwm]
 type = internal/bspwm
@@ -54,34 +49,23 @@ label-urgent-foreground = #ffd02646
 label-urgent-padding = 2
 
 label-empty = 
-label-empty-foreground = #66ffffff
+label-empty-foreground = #33ffffff
 label-empty-padding = 2
-
-
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:120:...%
-label-padding = 4
 
 
 [module/date]
 type = internal/date
 
 interval = 1.0
-date = %a %b %d,
+date = %A %d %B,
 time = %H:%M
 
-date-alt = %A, %d %B %Y
+date-alt = %A %d %B %Y,
 time-alt = %H:%M:%S
 
 label = %date% %time%
 format =   <label>
-format-padding = 3
-
-[module/padding]
-type = custom/text
-content = |
-content-padding = 4
+format-padding = 2
 
 
 [module/battery]
@@ -100,9 +84,9 @@ format-full = <ramp-capacity>  <label-full>
 label-charging = %percentage%%
 label-discharging = %percentage%%
 label-full = %percentage%%
-format-charging-padding = 3
-format-discharging-padding = 3
-format-full-padding = 3
+format-charging-padding = 2
+format-discharging-padding = 2
+format-full-padding = 2
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -119,9 +103,8 @@ animation-charging-framerate = 750
 
 
 [module/backlight]
-type = internal/backlight
+type = internal/xbacklight
 
-card = intel_backlight
 enable-scroll = true
 
 format = <ramp> <label>
@@ -133,18 +116,31 @@ ramp-2 = 🌓
 ramp-3 = 🌒
 ramp-4 = 🌑
 
+
 [module/volume]
 type = internal/volume
 
-format-volume = <ramp-volume>  <label-volume>
-format-muted = <label-muted>
+format-volume =   <label-volume>
+format-muted =   <label-muted>
 label-volume = %percentage%%
-label-muted =   muted
+label-muted = 0%
 label-muted-foreground = #aaa
-format-volume-padding = 3
-format-muted-padding = 3
+format-volume-padding = 2
+format-muted-padding = 2
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-headphones-0 = 
+
+[module/keyboard]
+type = internal/xkeyboard
+
+format =   <label-layout>
+label-layout = %layout%
+format-padding = 2
+
+
+[module/network-wired]
+type = internal/network
+interface = enp2s0
+
+format-connected =   <label-connected>
+label-connected = %downspeed%
+format-padding = 2
