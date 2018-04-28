@@ -65,7 +65,7 @@ time-alt = %H:%M:%S
 
 label = %date% %time%
 format =   <label>
-format-padding = 2
+format-padding-left = 2
 
 
 [module/battery]
