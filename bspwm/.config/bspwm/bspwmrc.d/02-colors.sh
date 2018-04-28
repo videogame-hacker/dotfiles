@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/zsh
 
 bspc config normal_border_color "#333841"
 bspc config presel_feedback_color "#333841"

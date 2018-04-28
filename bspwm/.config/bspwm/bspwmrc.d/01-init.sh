@@ -1,4 +1,4 @@
-i#!/usr/bin/sh
+#!/usr/bin/zsh
 
 setxkbmap gb -option compose:ralt &
 

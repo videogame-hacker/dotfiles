@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/zsh
 
 SXHKD_SHELL="/usr/bin/dash" sxhkd &
 xsetroot -cursor_name left_ptr
@@ -8,9 +8,20 @@ bspc monitor -d I II III IV V VI VII VIII IX X
 bspc config border_width 1
 bspc config window_gap 20
 
-for side in {top,bottom}
-do
+for side in {top,bottom}; do
     bspc config "${side}_padding" -10
+done
+
+# Match side padding to polybar width (1% of screen on both sides)
+
+screen_res=$(polybar -m | tail -1 | sed -e "s/^.*: //g" | sed -e "s/\+.*$//g")
+screen_width=$(echo $screen_res | cut -d "x" -f1)
+target_width=${"$((screen_width * -0.005))"/.*}
+
+side_padding=$((($(bspc config window_gap) / 2 + target_width) * -1))
+
+for side in {left,right}; do
+    bspc config "${side}_padding" $side_padding
 done
 
 bspc config split_ratio 0.5
@@ -23,14 +34,14 @@ bspc config pointer_follows_focus false
 
 for f in ~/.config/bspwm/bspwmrc.d/*
 do
-  source "$f"
+    env "$f"
 done
 
 if [ -d ~/.dotconfigs/machine-specific/$(hostname)/bspwmrc.d/ ]
 then
     for f in ~/.dotconfigs/machine-specific/$(hostname)/bspwmrc.d/*
     do
-        source "$f"
+        env "$f"
     done
 fi
 
