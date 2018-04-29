@@ -34,14 +34,14 @@ bspc config pointer_follows_focus false
 
 for f in ~/.config/bspwm/bspwmrc.d/*
 do
-    env "$f"
+    source "$f"
 done
 
 if [ -d ~/.dotconfigs/machine-specific/$(hostname)/bspwmrc.d/ ]
 then
     for f in ~/.dotconfigs/machine-specific/$(hostname)/bspwmrc.d/*
     do
-        env "$f"
+        source "$f"
     done
 fi
 
