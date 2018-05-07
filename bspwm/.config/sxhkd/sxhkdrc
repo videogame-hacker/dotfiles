@@ -73,7 +73,7 @@ super + alt + {Left,Down,Up,Right}
 # program hotkeys
 #
 super + Return
-    alacritty
+    kitty
 
 super + d
     rofi -show drun
