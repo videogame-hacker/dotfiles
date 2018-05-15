@@ -3,21 +3,17 @@ monitor = ${env:MONITOR}
 
 wm-restack = bspwm
 
-width = 98%
+width = 100%
 height = 32
-offset-x = 1%
-offset-y = 1%
+offset-y = 0
 
-background = #ff1e1f28
+background = #0f1014
 foreground = #ebece6
-
-border-size = 1
-border-color = #32ebece6
 
 spacing = 6
 
-padding-left = 4%
-padding-right = 4%
+padding-left = 5%
+padding-right = 5%
 module-margin-left = 1
 module-margin-right = 1
 
@@ -27,6 +23,7 @@ font-2 = EmojiOne Color:size=9;2
 font-3 = Source Han Sans KR:size=9;2
 
 modules-left = bspwm
+modules-center = xwindow
 modules-right = keyboard network-wired volume backlight date
 
 tray-position = right
@@ -144,3 +141,16 @@ interface = enp2s0
 format-connected =   <label-connected>
 label-connected = %downspeed%
 format-padding = 2
+
+
+[module/network-wireless]
+type = internal/network
+interface = wlp3s0
+
+format-connected =   <label-connected>
+label-connected = %essid% %signal% %downspeed%
+
+
+[module/xwindow]
+type = internal/xwindow
+label-maxlen = 80
