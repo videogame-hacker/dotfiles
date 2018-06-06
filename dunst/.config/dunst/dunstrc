@@ -101,14 +101,14 @@ color = "#377222"
 # and 'mod4' (windows-key)
 # xev might be helpful to find names for keys
 # close notification
-close = ctrl+space
+close = super+space
 # close all notifications
-close_all = ctrl+shift+space
+close_all = ctrl+super+space
 # redisplay last message(s)
 # On the US keyboard layout 'grave' is normally above TAB and left of '1'.
-history = ctrl+shift+h
+history = ctrl+super+h
 # context menu
-context = ctrl+shift+period
+context = ctrl+super+period
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the '#' and following  would be interpreted as a comment.
