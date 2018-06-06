@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'lilydjwg/colorizer'
 Plug 'sheerun/vim-polyglot'
 Plug 'w0ng/vim-hybrid'
+Plug 'latex-box-team/latex-box'
 
 call plug#end()
 

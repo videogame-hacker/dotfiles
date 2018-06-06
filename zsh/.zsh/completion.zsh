@@ -1,5 +1,5 @@
 autoload -U compinit
-compinit -C
+compinit
 
 # fixme - the load process here seems a bit bizarre
 zmodload -i zsh/complist
