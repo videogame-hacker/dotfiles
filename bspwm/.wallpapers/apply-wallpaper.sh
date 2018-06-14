@@ -5,20 +5,23 @@ WALLPAPERS=(
     "https://images.unsplash.com/photo-1461884430365-0a87b6123549"
     "https://images.unsplash.com/photo-1523650126631-9fafa6ed33fc"
     "https://images.unsplash.com/photo-1502533609822-c877fe10f870"
+    "https://images.unsplash.com/photo-1523988628690-c6661ec0e53d"
+    "https://images.unsplash.com/photo-1521794286957-348245b517a0"
 )
 
 function fetch() {
     mkdir "$HOME/.wallpapers/images/"
     
     for i in "${!WALLPAPERS[@]}"; do
-        wget -O "$HOME/.wallpapers/images/wallpaper-$i.jpg" "${WALLPAPERS[$i]}" &
+        if [ ! -f "$HOME/.wallpapers/images/wallpaper-$i.jpg" ]; then
+            wget -O "$HOME/.wallpapers/images/wallpaper-$i.jpg" "${WALLPAPERS[$i]}" &
+        fi
     done
 
     wait $(jobs -p)
 }
 
-last=#WALLPAPERS[@]-1
-
+last=`expr ${#WALLPAPERS[@]} - 1`
 if [ ! -f "$HOME/.wallpapers/images/wallpaper-${last}.jpg" ]; then
     fetch
 fi
