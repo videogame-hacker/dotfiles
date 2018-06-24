@@ -1,5 +1,5 @@
 autoload -U colors && colors
-export LSCOLORS="Gxfxcxdxbxegedabagacad"
+export LSCOLORS='exfxcxdxbxegedabagacad'
 
 if [[ -z "$LS_COLORS" ]]; then
     (( $+commands[dircolors] )) && eval "$(dircolors -b)"
@@ -13,3 +13,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 setopt auto_cd
 setopt multios
 setopt prompt_subst
+
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[comment]='fg=grey,dim'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=cyan'

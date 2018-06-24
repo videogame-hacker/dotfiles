@@ -45,7 +45,7 @@ prompt_precmd() {
         PROMPT+="$(_prompt_parse_git_dirty))$(_prompt_pipenv) $ "
     fi
 
-    RPROMPT="%F{249}%n@%M%f"
+    RPROMPT="%F{7}%n@%M%f"
 }
 
 prompt_init() {
@@ -61,7 +61,6 @@ prompt_init() {
     zstyle ':vcs_info:git*' actionformats '%b|%a'
 
     zstyle ':vcs_info:*' max-exports 2
-
 }
 
 prompt_init
