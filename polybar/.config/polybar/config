@@ -126,8 +126,8 @@ interval = 2
 host = 127.0.0.1
 port = 6600
 
-format-playing =   <label-song>
-format-paused =   <label-song>
+format-playing =     <label-song>
+format-paused =     <label-song>
 
 label-song-maxlen = 25
 label-song-ellipsis = true
