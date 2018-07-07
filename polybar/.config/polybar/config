@@ -129,7 +129,7 @@ port = 6600
 format-playing =     <label-song>
 format-paused =     <label-song>
 
-label-song-maxlen = 25
+label-song-maxlen = 48
 label-song-ellipsis = true
 
 [module/network-wired]
