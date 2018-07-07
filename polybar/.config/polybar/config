@@ -22,9 +22,9 @@ font-1 = FontAwesome:size=9;2
 font-2 = EmojiOne Color:size=9;2
 font-3 = Source Han Sans KR:size=9;2
 
-modules-left = bspwm
+modules-left = bspwm music
 modules-center = xwindow
-modules-right = keyboard network-wired volume backlight date
+modules-right = keyboard network-wired network-wireless volume battery date
 
 tray-position = right
 
@@ -99,21 +99,6 @@ animation-charging-4 = 
 animation-charging-framerate = 750
 
 
-[module/backlight]
-type = internal/xbacklight
-
-enable-scroll = true
-
-format = <ramp> <label>
-label = %percentage%
-
-ramp-0 = 🌕
-ramp-1 = 🌔
-ramp-2 = 🌓
-ramp-3 = 🌒
-ramp-4 = 🌑
-
-
 [module/volume]
 type = internal/volume
 
@@ -134,6 +119,19 @@ label-layout = %layout%
 format-padding = 2
 
 
+[module/music]
+type = internal/mpd
+interval = 2
+
+host = 127.0.0.1
+port = 6600
+
+format-playing =   <label-song>
+format-paused =   <label-song>
+
+label-song-maxlen = 25
+label-song-ellipsis = true
+
 [module/network-wired]
 type = internal/network
 interface = enp2s0
@@ -153,4 +151,4 @@ label-connected = %essid% %signal% %downspeed%
 
 [module/xwindow]
 type = internal/xwindow
-label-maxlen = 80
+label-maxlen = 144
