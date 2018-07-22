@@ -33,8 +33,8 @@ function title {
     esac
 }
 
-ZSH_THEME_TERM_TAB_TITLE_IDLE="zsh - %15<..<%/%<<"
-ZSH_THEME_TERM_TITLE_IDLE="%n@%m: %/"
+ZSH_THEME_TERM_TAB_TITLE_IDLE="%/"
+ZSH_THEME_TERM_TITLE_IDLE="%/"
 
 function title_precmd {
     emulate -L zsh
