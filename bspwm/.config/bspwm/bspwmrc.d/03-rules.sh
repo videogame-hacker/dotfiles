@@ -1,2 +1,1 @@
-bspc rule -a Nightly:Navigator state=tiled
-
+bspc rule -a '*:Navigator' state=tiled
