@@ -112,11 +112,12 @@ format-muted-padding = 2
 
 
 [module/keyboard]
-type = internal/xkeyboard
+type = custom/script
 
-format =   <label-layout>
-label-layout = %layout%
-format-padding = 2
+exec-if = which uim-status
+exec = $HOME/.dotconfigs/polybar-scripts/get-uim-status-line.sh
+
+interval = 1
 
 
 [module/music]
