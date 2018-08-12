@@ -1,5 +1,18 @@
-autoload -U compinit
-compinit -C
+autoload -Uz compinit
+
+comp_initialize=0
+for match in $zcompdump*(.Nmh+24); do
+   comp_initialize=1
+   break
+done
+
+if [ "$comp_initialize" -eq "1" ]; then
+  compinit
+  compdump
+else
+  compinit -C
+fi
+
 
 # fixme - the load process here seems a bit bizarre
 zmodload -i zsh/complist
@@ -61,7 +74,7 @@ zstyle '*' single-ignored show
 expand-or-complete-with-dots() {
   # toggle line-wrapping off and back on again
   [[ -n "$terminfo[rmam]" && -n "$terminfo[smam]" ]] && echoti rmam
-  print -Pn "%{%F{red}......%f%}"
+  print -Pn "%{%F{red}...%f%}"
   [[ -n "$terminfo[rmam]" && -n "$terminfo[smam]" ]] && echoti smam
 
   zle expand-or-complete
