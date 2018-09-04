@@ -146,8 +146,8 @@ format-padding = 2
 type = internal/network
 interface = wlp3s0
 
-format-connected =   <label-connected>
-label-connected = %essid% %signal% %downspeed%
+format-connected =    <label-connected>
+label-connected = %essid%  %signal%%  %downspeed%
 
 
 [module/xwindow]
