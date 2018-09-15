@@ -1,5 +1,7 @@
 #!/usr/bin/sh
 
+ibus-daemon -dr &
+
 discord-canary --start-minimized &
 syncthing-gtk -m &
 wire-desktop --startup &
