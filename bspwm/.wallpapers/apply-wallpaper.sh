@@ -11,6 +11,8 @@ WALLPAPERS=(
     "https://images.unsplash.com/photo-1473711186548-79d2ee78cdec"
     "https://images.unsplash.com/photo-1511447333015-45b65e60f6d5"
     "https://images.unsplash.com/photo-1487958449943-2429e8be8625"
+    "https://images.unsplash.com/photo-1519721909834-c50c17166602"
+    "https://images.unsplash.com/photo-1489483265172-b815d5ecc740"
 )
 
 function fetch() {
