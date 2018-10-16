@@ -147,9 +147,9 @@ type = internal/network
 interface = wlp3s0
 
 format-connected =    <label-connected>
-label-connected = %essid%  %signal%%  %downspeed%
+label-connected = %essid%  %downspeed%
 
 
 [module/xwindow]
 type = internal/xwindow
-label-maxlen = 144
+label-maxlen = 90
