@@ -10,8 +10,6 @@ window:
     x: 15
     y: 15
 
-  decorations: false
-
 font:
   normal:
     family: Liberation Mono
@@ -22,7 +20,7 @@ font:
   italic:
     family: Liberation Mono
 
-  size: 8.5
+  size: 10.0
 
 colors:
   primary:
