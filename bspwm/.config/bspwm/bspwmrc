@@ -16,7 +16,7 @@ for side in {top,bottom,left,right}; do
 done
 
 for side in {top,bottom}; do
-    bspc config "${side}_monocle_padding" 17
+    bspc config "${side}_monocle_padding" 15
 done
 
 bspc config split_ratio 0.5
