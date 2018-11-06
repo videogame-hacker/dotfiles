@@ -12,10 +12,6 @@ bspc config border_radius 6 || true
 
 for side in {top,bottom,left,right}; do
     bspc config "${side}_padding" -15
-    bspc config "${side}_monocle_padding" 20
-done
-
-for side in {top,bottom}; do
     bspc config "${side}_monocle_padding" 15
 done
 
