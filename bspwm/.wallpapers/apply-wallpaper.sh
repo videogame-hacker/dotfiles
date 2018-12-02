@@ -1,18 +1,19 @@
 #!/usr/bin/bash
 
+function unsp {
+    UNSPLASH_TRAILER="fm=jpg&crop=entropy&w=1920&h=1080&fit=crop"
+    echo "https://images.unsplash.com/$@?$UNSPLASH_TRAILER"
+}
+
+# https://source.unsplash.com/featured/1920x1080/?urban,night
+
 WALLPAPERS=(
-    "https://images.unsplash.com/photo-1506348424954-b03ae28965ec"
-    "https://images.unsplash.com/photo-1461884430365-0a87b6123549"
-    "https://images.unsplash.com/photo-1523650126631-9fafa6ed33fc"
-    "https://images.unsplash.com/photo-1502533609822-c877fe10f870"
-    "https://images.unsplash.com/photo-1505526484636-f0a465cf6d19"
-    "https://images.unsplash.com/photo-1498036882173-b41c28a8ba34"
-    "https://images.unsplash.com/photo-1517176910664-8106c69b644a"
-    "https://images.unsplash.com/photo-1473711186548-79d2ee78cdec"
-    "https://images.unsplash.com/photo-1511447333015-45b65e60f6d5"
-    "https://images.unsplash.com/photo-1487958449943-2429e8be8625"
-    "https://images.unsplash.com/photo-1519721909834-c50c17166602"
-    "https://images.unsplash.com/photo-1489483265172-b815d5ecc740"
+    $(unsp photo-1506348424954-b03ae28965ec)
+    $(unsp photo-1541517596158-94bdf510bff3)
+    $(unsp photo-1542810390-448ab2357d75)
+    $(unsp photo-1466158665257-b4899e4813b3)
+    $(unsp photo-1467645990565-90fd0640ed3e)
+    $(unsp photo-1453586857165-eb78d44460ca)
 )
 
 function fetch() {
