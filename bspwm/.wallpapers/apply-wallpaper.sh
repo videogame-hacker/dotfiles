@@ -14,6 +14,8 @@ WALLPAPERS=(
     $(unsp photo-1466158665257-b4899e4813b3)
     $(unsp photo-1467645990565-90fd0640ed3e)
     $(unsp photo-1453586857165-eb78d44460ca)
+    $(unsp photo-1519865402023-40e4b7bfcba0)
+    $(unsp photo-1519374086542-9ff30b72beec)
 )
 
 function fetch() {
