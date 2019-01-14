@@ -56,14 +56,15 @@ mouse_bindings:
 
 
 mouse:
+  hide_when_typing: false
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
 
+cursor:
+  style: Beam
+
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
-
-hide_cursor_when_typing: false
-cursor_style: Beam
 
 key_bindings:
   - { key: V,        mods: Control|Shift,    action: Paste               }
