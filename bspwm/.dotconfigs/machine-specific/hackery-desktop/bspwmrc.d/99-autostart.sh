@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 
-ibus-daemon -dr &
+# ibus-daemon -dr &
 
 discord --start-minimized &
 syncthing -no-browser & # syncthing-gtk -m &
