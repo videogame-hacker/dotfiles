@@ -24,11 +24,6 @@ bspc config click_to_focus any
 bspc config focus_follows_pointer false
 bspc config pointer_follows_focus false
 
-for f in ~/.config/bspwm/bspwmrc.d/*
-do
-    source "$f"
-done
-
 if [ -d ~/.dotconfigs/machine-specific/$(hostname)/bspwmrc.d/ ]
 then
     for f in ~/.dotconfigs/machine-specific/$(hostname)/bspwmrc.d/*
@@ -36,5 +31,10 @@ then
         source "$f"
     done
 fi
+
+for f in ~/.config/bspwm/bspwmrc.d/*
+do
+    source "$f"
+done
 
 compton --config ~/.config/compton.conf &
