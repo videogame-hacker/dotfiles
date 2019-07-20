@@ -4,7 +4,8 @@
 
 # logout
 super + ctrl + Escape
-    bspc quit
+    xfce4-session-logout
+    # bspc quit
 
 # close, kill window
 super + shift + {_,ctrl + }q
