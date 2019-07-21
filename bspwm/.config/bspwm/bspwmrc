@@ -37,4 +37,5 @@ do
     source "$f"
 done
 
+bspc desktop -f 1
 compton --config ~/.config/compton.conf &
