@@ -12,42 +12,43 @@ foreground = #ebece6
 
 spacing = 6
 
-padding-left = 5%
-padding-right = 5%
+padding-left = 2%
+padding-right = 2%
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Source Sans Pro:size=9;2
-font-1 = FontAwesome:size=9;2
-font-2 = EmojiOne Color:size=9;2
-font-3 = Source Han Sans KR:size=9;2
+font-0 = "Roboto:size=10:antialias=true;2"
+font-1 = "Noto Sans CJK KR:size=10;2"
+font-2 = "Noto Sans Symbols:size=10;3"
+font-3 = "Noto Sans Symbols2:size=10;3"
 
 modules-left = bspwm music
 modules-center = xwindow
-modules-right = keyboard network-wired network-wireless volume battery date
+modules-right = volume date
 
 tray-position = right
 
 [module/bspwm]
 type = internal/bspwm
 
-format = <label-state> <label-mode>
+format = <label-state>
 
 pin-workspaces = true
 
-label-focused = 
-label-focused-padding = 2
+label-focused = ⬢
+label-focused-padding = 1
 
-label-occupied = 
-label-occupied-padding = 2
+label-occupied = ⬡
+label-occupied-foreground = #ffffffff
+label-occupied-padding = 1
 
-label-urgent = 
+label-urgent = ⬡
 label-urgent-foreground = #ffd02646
-label-urgent-padding = 2
+label-urgent-padding = 1
 
-label-empty = 
+label-empty = ⬡
 label-empty-foreground = #33ffffff
-label-empty-padding = 2
+label-empty-padding = 1
 
 
 [module/date]
@@ -61,63 +62,20 @@ date-alt = %A %d %B %Y,
 time-alt = %H:%M:%S
 
 label = %date% %time%
-format =   <label>
-format-padding-left = 2
-
-
-[module/battery]
-type = internal/battery
-
-full-at = 95
-
-battery = BAT0
-adapter = AC0
-
-poll-interval = 5
-
-format-charging = <animation-charging>  <label-charging>
-format-discharging = <ramp-capacity>  <label-discharging>
-format-full = <ramp-capacity>  <label-full>
-label-charging = %percentage%%
-label-discharging = %percentage%%
-label-full = %percentage%%
-format-charging-padding = 2
-format-discharging-padding = 2
-format-full-padding = 2
-
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-framerate = 750
+format = <label>
+format-padding = 1
 
 
 [module/volume]
 type = internal/pulseaudio
 
-format-volume =   <label-volume>
-format-muted =   <label-muted>
+format-volume = 🔊 <label-volume>
+format-muted = 🔈 <label-muted>
 label-volume = %percentage%%
 label-muted = 0%
 label-muted-foreground = #aaa
-format-volume-padding = 2
-format-muted-padding = 2
-
-
-[module/keyboard]
-type = custom/script
-
-exec-if = which uim-status
-exec = $HOME/.dotconfigs/polybar-scripts/get-uim-status-line.sh
-
-interval = 1
+format-volume-padding = 1
+format-muted-padding = 1
 
 
 [module/music]
@@ -127,28 +85,11 @@ interval = 2
 host = 127.0.0.1
 port = 6600
 
-format-playing =     <label-song>
-format-paused =     <label-song>
+format-playing = <label-song>
+format-paused = <label-song>
 
 label-song-maxlen = 48
 label-song-ellipsis = true
-
-[module/network-wired]
-type = internal/network
-interface = enp2s0
-
-format-connected =   <label-connected>
-label-connected = %downspeed%
-format-padding = 2
-
-
-[module/network-wireless]
-type = internal/network
-interface = wlp3s0
-
-format-connected =    <label-connected>
-label-connected = %essid%  %downspeed%
-
 
 [module/xwindow]
 type = internal/xwindow

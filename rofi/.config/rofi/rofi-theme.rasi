@@ -39,7 +39,7 @@
 }
 
 #element {
-    padding: 16;
+    padding: 10;
     border: 0 0 1 0;
     border-color: @separatorcolor;
     background-color: @backgroundcoloralternate;
@@ -83,13 +83,13 @@
 }
 
 #prompt {
-    padding: 16;
+    padding: 10;
     background-color: @backgroundcoloralternate;
     border: 0 1 0 0;
 }
 
 #entry {
-    padding: 16;
+    padding: 10;
 }
 
 #scrollbar {

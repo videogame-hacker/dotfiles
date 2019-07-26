@@ -10,4 +10,4 @@ function wall() {
 wall &
 # hsetroot -solid "#1e1f28"
 
-MONITOR=$(polybar -m|tail -1|sed -e 's/:.*$//g') polybar -c ~/.config/polybar/config top &
+MONITOR=$(polybar -m|grep primary|sed -e 's/:.*$//g') polybar -c ~/.config/polybar/config top &
