@@ -82,11 +82,11 @@ format-muted-padding = 1
 type = internal/mpd
 interval = 2
 
-host = 127.0.0.1
+host = localhost
 port = 6600
 
-format-playing = <label-song>
-format-paused = <label-song>
+format-playing = ♫ <label-song>
+format-paused = ⏸ <label-song>
 
 label-song-maxlen = 48
 label-song-ellipsis = true
