@@ -1,32 +1,33 @@
+[colors]
+focused = #bcecff
+urgent = #ffdb9e
+foreground = #ffffff
+
+
 [bar/top]
 monitor = ${env:MONITOR}
-
 wm-restack = bspwm
 
-width = 100%
-height = 32
-offset-y = 0
-
-background = #0f1014
-foreground = #ebece6
-
-spacing = 6
-
-padding-left = 2%
-padding-right = 2%
-module-margin-left = 1
-module-margin-right = 1
-
-font-0 = "Roboto:size=10:antialias=true;2"
-font-1 = "Noto Sans CJK KR:size=10;2"
-font-2 = "Noto Sans Symbols:size=10;3"
-font-3 = "Noto Sans Symbols2:size=10;3"
+font-0 = Noto Sans:pixelsize=10:antialias=true;1
+font-1 = Noto Sans CJK KR:pixelsize=10:antialias=true;1
 
 modules-left = bspwm music
 modules-center = xwindow
 modules-right = volume date
 
-tray-position = right
+width = 100%
+height = 32
+
+background = #ff121212
+foreground = ${colors.foreground}
+
+line-size = 1
+padding-left = 1
+padding-right = 2
+module-margin = 1
+
+separator = %{F#8f8f8f}|%{F-}
+
 
 [module/bspwm]
 type = internal/bspwm
@@ -35,20 +36,22 @@ format = <label-state>
 
 pin-workspaces = true
 
-label-focused = ⬢
+label-focused = %name%
+label-focused-foreground = ${colors.focused}
 label-focused-padding = 1
+label-focused-overline = ${colors.focused}
 
-label-occupied = ⬡
-label-occupied-foreground = #ffffffff
+label-occupied = %name%
+label-occupied-foreground = ${colors.foreground}
 label-occupied-padding = 1
 
-label-urgent = ⬡
-label-urgent-foreground = #ffd02646
-label-urgent-padding = 1
-
-label-empty = ⬡
-label-empty-foreground = #33ffffff
+label-empty = %name%
+label-empty-foreground = ${colors.foreground}
 label-empty-padding = 1
+
+label-urgent = %name%
+label-urgent-foreground = ${colors.urgent}
+label-urgent-padding = 1
 
 
 [module/date]
@@ -69,14 +72,13 @@ format-padding = 1
 [module/volume]
 type = internal/pulseaudio
 
-format-volume = 🔊 <label-volume>
-format-muted = 🔈 <label-muted>
-label-volume = %percentage%%
-label-muted = 0%
+format-volume = <label-volume>
+format-muted = <label-muted>
+label-volume = Volume: %percentage%%
+label-muted = Volume: 0%
 label-muted-foreground = #aaa
 format-volume-padding = 1
 format-muted-padding = 1
-
 
 [module/music]
 type = internal/mpd
@@ -85,8 +87,8 @@ interval = 2
 host = localhost
 port = 6600
 
-format-playing = ♫ <label-song>
-format-paused = ⏸ <label-song>
+format-playing = <label-song>
+format-paused = <label-song> (Paused)
 
 label-song-maxlen = 48
 label-song-ellipsis = true

@@ -3,18 +3,14 @@ env:
 
 window:
   padding:
-    x: 15
-    y: 15
+    x: 16
+    y: 16
+
+  dynamic_padding: false
 
 font:
   normal:
-    family: Liberation Mono
-
-  bold:
-    family: Liberation Mono
-
-  italic:
-    family: Liberation Mono
+    family: monospace
 
   size: 9.0
 
@@ -23,28 +19,28 @@ scrolling:
 
 colors:
   primary:
-    background: '0x1e1f28'
-    foreground: '0xebece6'
+    background: '0x1a1a1a'
+    foreground: '0xffffff'
 
   normal:
-    black:   '0x0d0d0d'
-    red:     '0xfb4245'
-    green:   '0x50fa7b'
-    yellow:  '0xf0fa8b'
-    blue:    '0x49b9fe'
-    magenta: '0xfb4cb3'
-    cyan:    '0x8be9fd'
-    white:   '0xededec'
+    black:   '0x1a1a1a'
+    red:     '0xe27878'
+    green:   '0x8cff87'
+    yellow:  '0xffed72'
+    blue:    '0x2a93e2'
+    magenta: '0xe98cca'
+    cyan:    '0x5fe2fc'
+    white:   '0xffffff'
 
   bright:
-    black:   '0x555555'
-    red:     '0xfb4245'
-    green:   '0x50fa7b'
-    yellow:  '0xf0fa8b'
-    blue:    '0x49b9fe'
-    magenta: '0xfb4cb3'
-    cyan:    '0x8be9fd'
-    white:   '0xededec'
+    black:   '0x4a4a4a'
+    red:     '0xff8787'
+    green:   '0xa4f3b0'
+    yellow:  '0xf8ed7e'
+    blue:    '0x20a1e4'
+    magenta: '0xee87d0'
+    cyan:    '0x77cef0'
+    white:   '0xffffff'
 
 visual_bell:
   animation: EaseOutExpo
