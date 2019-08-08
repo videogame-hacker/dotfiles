@@ -1,0 +1,15 @@
+{
+    "layer": "bottom",
+    "modules-left": [ "sway/workspaces", "sway/mode" ],
+    "modules-center": [ "sway/window" ],
+    "modules-right": [ "pulseaudio", "clock" ],
+    "height": 30,
+
+    "clock": {
+        "format": "{: %a %-d %b, %H:%M}"
+    },
+
+    "pulseaudio": {
+        "format": "Volume: {volume}%"
+    }
+}

@@ -35,4 +35,5 @@ if [ ! -f "$HOME/.wallpapers/images/wallpaper-${last}.jpg" ]; then
     fetch
 fi
 
-feh --randomize --bg-fill "$HOME/.wallpapers/images"
+index=$(($RANDOM % ${#WALLPAPERS[@]}))
+swaybg -i "$HOME/.wallpapers/images/wallpaper-$index.jpg" -m fill &
