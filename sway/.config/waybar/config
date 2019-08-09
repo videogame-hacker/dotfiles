@@ -1,9 +1,15 @@
 {
     "layer": "bottom",
-    "modules-left": [ "sway/workspaces", "sway/mode" ],
+    "modules-left": [ "sway/workspaces", "sway/mode", "mpd" ],
     "modules-center": [ "sway/window" ],
     "modules-right": [ "pulseaudio", "clock", "tray" ],
     "height": 30,
+
+    "mpd": {
+        "format": "{artist} - {title}",
+        "format-stopped": "",
+        "format-disconnected": ""
+    },
 
     "clock": {
         "format": "{: %a %-d %b, %H:%M}"
