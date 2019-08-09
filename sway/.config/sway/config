@@ -1,104 +1,18 @@
 set $mod Mod4
 
-input * xkb_layout "gb"
-input * xkb_options "compose:ralt"
-default_border pixel 1
-
-smart_borders on
-smart_gaps on
-
-gaps inner 6
-gaps outer -6
-
-exec_always ~/.wallpapers/apply-wallpaper.sh
-exec mako
-
-bindsym $mod+Shift+q kill
+include input.conf
+include aesthetics.conf
+include autorun.conf
+include wmcontrol.conf
 
 bindsym $mod+Return exec alacritty
 bindsym $mod+d exec rofi -show drun
-
-floating_modifier $mod normal
-
-bindsym $mod+Shift+c reload
-bindsym $mod+Ctrl+Escape exit
+bindsym $mod+e exec thunar
 
 bindsym Print exec hackery-screenshot.sh
 
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
-
-bindsym $mod+s floating toggle
-bindsym $mod+t focus
-
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
-
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
-
-bindsym $mod+f fullscreen
-
-bindsym $mod+Ctrl+Down splitv
-bindsym $mod+Ctrl+Left splith
-
-mode "resize" {
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
-
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
-bindsym $mod+r mode "resize"
-focus_follows_mouse no
-hide_edge_borders smart_no_gaps
-
-# colours                   border    background  text        indicator   child border
-client.focused             #ffffff   #080808     #ffffff     #e96670     #ffffff
-client.focused_inactive    #000000   #000000     #ffffff     #e96670     #000000
-client.urgent              #ffffff   #080808     #ffffff     #e96660     #080808
-
-focus_wrapping no
-
 bar {
     swaybar_command waybar
-}
-
-input * {
-    accel_profile adaptive
-    pointer_accel -0.75
-}
-
-input type:touchpad {
-    accel_profile flat
-    pointer_accel -0.33
-    tap enabled
 }
 
 # machine-specific tweaks
@@ -106,14 +20,17 @@ input type:touchpad {
 output eDP-1 res 1600 900
 
 ## hackery-desktop screens
-output HDMI-A-1 res 1920x1080@75Hz pos 0,0
-output DP-2 res 1920x1080@144Hz pos 1920,0
 
-workspace 1 output DP-2
-workspace 2 output DP-2
+set $hackerydesktopscreen0 "Iiyama North America X2483/2481 1156480323669"
+set $hackerydesktopscreen1 "Ancor Communications Inc VG248 G4LMQS010332"
+output $hackerydesktopscreen0 res 1920x1080@74.973000Hz pos 0 0
+output $hackerydesktopscreen1 res 1920x1080@144.001007Hz pos 1920 0
 
-workspace 8 output HDMI-A-1
-workspace 9 output HDMI-A-1
-workspace 10 output HDMI-A-1
+workspace 1 output $hackerydesktopscreen1
+workspace 2 output $hackerydesktopscreen1
+
+workspace 8 output $hackerydesktopscreen0
+workspace 9 output $hackerydesktopscreen0
+workspace 10 output $hackerydesktopscreen0
 
 workspace 1

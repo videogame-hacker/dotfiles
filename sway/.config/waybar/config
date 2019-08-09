@@ -2,7 +2,7 @@
     "layer": "bottom",
     "modules-left": [ "sway/workspaces", "sway/mode" ],
     "modules-center": [ "sway/window" ],
-    "modules-right": [ "pulseaudio", "clock" ],
+    "modules-right": [ "pulseaudio", "clock", "tray" ],
     "height": 30,
 
     "clock": {
