@@ -16,11 +16,12 @@ bar {
 }
 
 # machine-specific tweaks
+
 ## hackery-laptop screen
-output eDP-1 res 1600 900
+set $hackerylaptopscreen0 "Chimei Innolux Corporation 0x1242 0x00000000"
+output $hackerylaptopscreen0 res 1600 900
 
 ## hackery-desktop screens
-
 set $hackerydesktopscreen0 "Iiyama North America X2483/2481 1156480323669"
 set $hackerydesktopscreen1 "Ancor Communications Inc VG248 G4LMQS010332"
 output $hackerydesktopscreen0 res 1920x1080@74.973000Hz pos 0 0
