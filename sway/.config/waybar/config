@@ -16,6 +16,8 @@
     },
 
     "pulseaudio": {
-        "format": "Volume: {volume}%"
+        "format": "Volume: {volume}%",
+        "format-muted": "Volume: 0%",
+        "on-click": "sh -c 'pactl set-sink-mute $(pactl info | grep \"Default Sink\" | cut -d \" \" -f3) toggle'"
     }
 }
