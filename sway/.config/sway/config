@@ -7,7 +7,7 @@ include wmcontrol.conf
 
 bindsym $mod+Return exec alacritty
 bindsym $mod+d exec rofi -show drun
-bindsym $mod+e exec thunar
+bindsym $mod+e exec sh -c 'xdg-open $HOME'
 
 bindsym Print exec hackery-screenshot.sh
 
