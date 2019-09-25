@@ -12,3 +12,6 @@ workspace 4 output $screen1
 workspace 3 output $screen1
 workspace 2 output $screen1
 workspace 1 output $screen1
+
+workspace 8
+workspace 1
