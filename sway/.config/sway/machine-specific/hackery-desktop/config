@@ -1,0 +1,14 @@
+set $screen0 "Iiyama North America X2483/2481 1156480323669"
+set $screen1 "Ancor Communications Inc VG248 G4LMQS010332"
+
+workspace 10 output $screen0
+workspace 9 output $screen0
+workspace 8 output $screen0
+
+workspace 7 output $screen1
+workspace 6 output $screen1
+workspace 5 output $screen1
+workspace 4 output $screen1
+workspace 3 output $screen1
+workspace 2 output $screen1
+workspace 1 output $screen1
