@@ -4,24 +4,22 @@
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
     min-height: 0;
-    color: #ffffff;
+    color: #cfd6e6;
 }
 
 window#waybar {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: rgba(18, 18, 18, 0.90);
+    box-shadow: inset 0 -2px 0 rgba(1, 1, 1, 0.55);
+    color: #cfd6e6;
 }
 
 #workspaces button {
     padding: 0 0.25em;
     background-color: transparent;
-    color: #ffffff;
-    border-bottom: 1px solid transparent;
 }
 
 #workspaces button.focused {
-    color: #21D5EA;
-    border-bottom: 1px solid #21D5EA;
+    box-shadow: inset 0 -2px 0 #21D5EA;
 }
 
 #mode, #mpd {
