@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-WALLPAPER_URL="https://source.unsplash.com/random/1920x1080?urban,nature"
+WALLPAPER_URL="https://source.unsplash.com/featured/1920x1080?urban,night,nature,water"
 
 function fetch() {
     [ -d "$HOME/.wallpapers/images" ] || mkdir "$HOME/.wallpapers/images"
@@ -13,4 +13,5 @@ fi
 
 killall swaybg
 swaybg -i "$HOME/.wallpapers/images/wallpaper.jpg" -m fill &
+sleep 1
 fetch
