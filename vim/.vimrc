@@ -9,7 +9,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'lilydjwg/colorizer'
 Plug 'sheerun/vim-polyglot'
 Plug 'w0ng/vim-hybrid'
-Plug 'latex-box-team/latex-box'
+
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 call plug#end()
 
@@ -39,3 +40,8 @@ nnoremap k gk
 
 set number
 
+augroup pandoc_syntax
+    au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+augroup END
+
+let g:pandoc#syntax#conceal#use = 0

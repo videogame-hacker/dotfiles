@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 
 WALLPAPER_URL="https://source.unsplash.com/featured/1920x1080?urban,night,nature,water"
+[ -f "$HOME/.wallpapers/images/config" ] && source "$HOME/.wallpapers/images/config"
 
 function fetch() {
     [ -d "$HOME/.wallpapers/images" ] || mkdir "$HOME/.wallpapers/images"
