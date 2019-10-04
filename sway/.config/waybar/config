@@ -8,16 +8,23 @@
     "mpd": {
         "format": "{artist} - {title}",
         "format-stopped": "",
-        "format-disconnected": ""
+        "format-disconnected": "",
+        "tooltip": false
     },
 
     "clock": {
-        "format": "{: %a %-d %b, %H:%M}"
+        "format": "{: %a %-d %b, %H:%M}",
+        "tooltip": false
     },
 
     "pulseaudio": {
         "format": "Volume: {volume}%",
         "format-muted": "Volume: 0%",
-        "on-click": "sh -c 'pactl set-sink-mute $(pactl info | grep \"Default Sink\" | cut -d \" \" -f3) toggle'"
+        "on-click": "sh -c 'pactl set-sink-mute $(pactl info | grep \"Default Sink\" | cut -d \" \" -f3) toggle'",
+        "tooltip": false
+    },
+
+    "sway/window": {
+        "tooltip": false
     }
 }
