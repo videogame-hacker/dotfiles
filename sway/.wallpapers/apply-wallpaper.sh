@@ -14,5 +14,5 @@ fi
 
 killall swaybg
 swaybg -i "$HOME/.wallpapers/images/wallpaper.jpg" -m fill &
-sleep 1
+sleep 30
 fetch
