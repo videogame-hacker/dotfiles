@@ -17,5 +17,4 @@ bar {
 
 # machine-specific tweaks
 
-exec kanshi
 exec_always sh -c 'swaymsg include "$HOME/.config/sway/machine-specific/$(hostname)/config"'
