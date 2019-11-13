@@ -46,10 +46,7 @@ else
   bindkey "\e[3~" delete-char
 fi
 
-if [[ "$TERM" == "xterm-256color" ]]; then
-  bindkey '^H' backward-kill-word
-else
-  bindkey '^?' backward-kill-word
-fi
+bindkey '^H' backward-kill-word
+# bindkey '^?' backward-kill-word
 
 bindkey '^[[3;5~' kill-word
