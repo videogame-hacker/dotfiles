@@ -45,9 +45,7 @@ label-occupied = %name%
 label-occupied-foreground = ${colors.foreground}
 label-occupied-padding = 1
 
-label-empty = %name%
-label-empty-foreground = #aaa
-label-empty-padding = 1
+label-empty =
 
 label-urgent = %name%
 label-urgent-foreground = ${colors.urgent}

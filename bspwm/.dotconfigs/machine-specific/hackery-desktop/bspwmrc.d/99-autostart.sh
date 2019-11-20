@@ -1,3 +1,3 @@
 discord --start-minimized &
 syncthing -no-browser &
-wire-desktop --startup &
+signal-desktop --start-in-tray &

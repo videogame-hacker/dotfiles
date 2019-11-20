@@ -3,8 +3,7 @@
 setxkbmap gb -option compose:ralt &
 
 function wall() {
-    sleep .5
-    ~/.wallpapers/apply-wallpaper.sh
+    ~/.wallpapers/fetch-wallpaper.sh feh --bg-fill "$HOME/.wallpapers/images/wallpaper.jpg" &
 }
 
 wall &
@@ -12,4 +11,4 @@ wall &
 
 dunst &
 
-MONITOR=$(polybar -m|grep primary|sed -e 's/:.*$//g') polybar -c ~/.config/polybar/config top &
+MONITOR=$(polybar -m|tail -1|sed -e 's/:.*$//g') polybar -c ~/.config/polybar/config top &
