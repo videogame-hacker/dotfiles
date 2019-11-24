@@ -1,6 +1,6 @@
 [colors]
 focused = #bcecff
-urgent = #ffdb9e
+urgent = #FE726F
 foreground = #ffffff
 
 
@@ -38,18 +38,18 @@ pin-workspaces = true
 
 label-focused = %name%
 label-focused-foreground = ${colors.focused}
-label-focused-padding = 1
+label-focused-padding = 2
 label-focused-overline = ${colors.focused}
 
 label-occupied = %name%
 label-occupied-foreground = ${colors.foreground}
-label-occupied-padding = 1
+label-occupied-padding = 2
 
 label-empty =
 
 label-urgent = %name%
 label-urgent-foreground = ${colors.urgent}
-label-urgent-padding = 1
+label-urgent-padding = 2
 
 
 [module/date]
