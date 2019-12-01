@@ -1,5 +1,7 @@
 #!/usr/bin/zsh
 
+export WINIT_HIDPI_FACTOR=1
+
 SXHKD_SHELL="/usr/bin/dash" sxhkd &
 xsetroot -cursor_name left_ptr
 

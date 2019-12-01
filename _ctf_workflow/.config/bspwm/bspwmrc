@@ -1,0 +1,28 @@
+#!/usr/bin/zsh
+
+# Make sure alacritty is a normal size
+export WINIT_HIDPI_FACTOR=1
+
+SXHKD_SHELL="/usr/bin/dash" sxhkd &
+xsetroot -cursor_name left_ptr
+
+bspc config border_width 0
+
+bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+
+bspc config split_ratio 0.5
+
+bspc config single_monocle true
+bspc config borderless_monocle true
+
+bspc config click_to_focus any
+bspc config focus_follows_pointer false
+bspc config pointer_follows_focus true
+
+for f in $(dirname $0)/bspwmrc.d/*
+do
+    source "$f"
+done
+
+bspc desktop -f 1
+picom --config ~/.config/picom.conf &
