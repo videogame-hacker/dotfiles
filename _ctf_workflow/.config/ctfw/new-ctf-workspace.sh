@@ -1,6 +1,6 @@
 #!/usr/bin/zsh
 
-set name=$(rofi -dmenu -p New)
+name=$(rofi -dmenu -p New)
 
-mkdir -p "~/ctf/$name/{downloads,misc,solution}"
-(cd "~/ctf/$name/" && exec alacritty)
+mkdir -p "$HOME/ctf/$name/downloads" "$HOME/ctf/$name/misc" "$HOME/ctf/$name/solution"
+(cd "$HOME/ctf/$name/" && exec alacritty)

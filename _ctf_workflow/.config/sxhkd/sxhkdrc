@@ -47,7 +47,7 @@ super + d
     rofi -show drun
 
 super + n
-    ~/.config/ctfw/scripts/new-ctf-workspace.sh
+    ~/.config/ctfw/new-ctf-workspace.sh
 
 super + e
     xdg-open $HOME
