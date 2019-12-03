@@ -40,4 +40,4 @@ do
 done
 
 bspc desktop -f 1
-picom --config ~/.config/picom.conf &
+picom --config ~/.config/picom.conf --experimental-backends &
