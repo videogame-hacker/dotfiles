@@ -2,8 +2,8 @@
 NPM_PACKAGES="${HOME}/.npm-packages"
 export PATH="$NPM_PACKAGES/bin:$PATH"
 
-export DENO_DIR="$HOME/.deno"
-export PATH="$DENO_DIR/bin:$PATH"
+export DENO_HOME="$HOME/.deno"
+export PATH="$DENO_HOME/bin:$PATH"
 
 # Source environment for nvm if installed
 if [ -f "/usr/share/nvm/init-nvm.sh" ]
