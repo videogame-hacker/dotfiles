@@ -11,6 +11,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'w0ng/vim-hybrid'
 
 Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
