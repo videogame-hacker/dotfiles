@@ -13,6 +13,8 @@ Plug 'w0ng/vim-hybrid'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'editorconfig/editorconfig-vim'
 
+Plug 'ziglang/zig.vim'
+
 call plug#end()
 
 set ruler
