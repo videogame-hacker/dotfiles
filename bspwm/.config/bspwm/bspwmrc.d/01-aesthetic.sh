@@ -14,3 +14,4 @@ bspc config single_monocle true
 
 bspc config normal_border_color "#19171a"
 bspc config focused_border_color "#f07fbe"
+bspc config presel_feedback_color "#f07fbe"
