@@ -4,6 +4,8 @@ Portable configurations for my computing setup.
 
 I use [Arch Linux](https://archlinux.org/) and [bspwm](https://github.com/baskerville/bspwm).
 
+![A screenshot of my setup](./screenshot.png)
+
 ## Usage
 
 Dotfiles (except most of `_apps`) are managed with [GNU Stow](https://www.gnu.org/software/stow/).
