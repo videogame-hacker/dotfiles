@@ -5,10 +5,15 @@ sxhkd &
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 
-for f in ~/.config/bspwm/bspwmrc.d/*
-do
+for f in $HOME/.config/bspwm/bspwmrc.d/*.sh; do
     source "$f"
 done
+
+if [ -d $HOME/.config/bspwm/bspwmrc.d/machine-specific/$(hostname)/ ]; then
+    for f in $HOME/.config/bspwm/bspwmrc.d/machine-specific/$(hostname)/*.sh; do
+        source "$f"
+    done
+fi
 
 MONITOR=$(polybar -m|tail -1|sed -e 's/:.*$//g') polybar -c ~/.config/polybar/config top &
 picom &
