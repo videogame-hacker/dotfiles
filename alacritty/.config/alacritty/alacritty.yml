@@ -1,0 +1,55 @@
+env:
+  TERM: xterm-256color
+
+window:
+  padding:
+    x: 32
+    y: 32
+
+  dynamic_padding: false
+
+font:
+  normal:
+    family: Fantasque Sans Mono
+
+  size: 11.0
+
+scrolling:
+  history: 10000
+
+cursor:
+  style: Block
+  unfocused_hollow: true
+
+colors:
+  # Cursor colors
+  cursor:
+    text: '0xe5d1dd'
+    cursor: '0x423d45'
+
+  # Default colors
+  primary:
+    background: '0x19171a'
+    foreground: '0xe5d1dd'
+
+  # Normal colors
+  normal:
+    black:   '0x151515'
+    red:     '0xfa5565'
+    green:   '0x21f07f'
+    yellow:  '0xfde965'
+    blue:    '0x3bb7fb'
+    magenta: '0xf25ec4'
+    cyan:    '0x39ddd0'
+    white:   '0x9d989f'
+
+  # Bright colors
+  bright:
+    black:   '0x505050'
+    red:     '0xf75c6b'
+    green:   '0x40f893'
+    yellow:  '0xfafa64'
+    blue:    '0x72c6f1'
+    magenta: '0xf07fbe'
+    cyan:    '0x71f2e8'
+    white:   '0xf5f5f5'
