@@ -12,7 +12,7 @@ font:
   normal:
     family: Fantasque Sans Mono
 
-  size: 14.0
+  size: 13.5
 
 scrolling:
   history: 10000
