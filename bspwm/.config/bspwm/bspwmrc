@@ -9,3 +9,5 @@ for f in ~/.config/bspwm/bspwmrc.d/*
 do
     source "$f"
 done
+
+MONITOR=$(polybar -m|tail -1|sed -e 's/:.*$//g') polybar -c ~/.config/polybar/config top &

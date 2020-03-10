@@ -24,3 +24,4 @@ You can use `stow -D` to uninstall dotfile packages, too.
 - Vimix GTK theme
 - `vimix-cursors`
 - Tela icon theme
+- `polybar`
