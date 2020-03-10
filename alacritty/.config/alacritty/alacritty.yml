@@ -24,13 +24,13 @@ cursor:
 colors:
   # Cursor colors
   cursor:
-    text: '0xe5d1dd'
+    text: '0xfcf2f8'
     cursor: '0x423d45'
 
   # Default colors
   primary:
+    foreground: '0xfcf2f8'
     background: '0x19171a'
-    foreground: '0xe5d1dd'
 
   # Normal colors
   normal:
