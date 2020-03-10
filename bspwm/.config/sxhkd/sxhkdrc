@@ -1,0 +1,31 @@
+# =============
+# bspwm control
+# =============
+
+super + ctrl + Escape
+	bspc quit
+
+super + {1-9,0}
+    bspc desktop -f '{1-9,10}'
+
+super + shift + {1-9,0}
+    bspc node -d '{1-9,10}'
+
+super + {_,shift + }{Left,Down,Up,Right}
+    bspc node -{f,s} {west,south,north,east}
+
+super + shift + q
+    bspc node -c
+
+# ====================
+# Application bindings
+# ====================
+
+super + Return
+	alacritty
+
+super + d
+	rofi -show run
+
+super + e
+	xdg-open $HOME
