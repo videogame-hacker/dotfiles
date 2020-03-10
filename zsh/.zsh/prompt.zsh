@@ -1,24 +1,15 @@
 _prompt_color() {
     if [[ -n $SSH_CONNECTION ]]; then
-        echo "cyan"
+        echo "%F{cyan}"
     else
-        echo "green"
+        echo "%F{magenta}%F{13}"
     fi
 }
 
 function _prompt_parse_git_dirty() {
   local STATUS=''
-  local FLAGS
-  FLAGS=('--porcelain')
-  if [[ "$(command git config --get oh-my-zsh.hide-dirty)" != "1" ]]; then
-    if [[ $POST_1_7_2_GIT -gt 0 ]]; then
-      FLAGS+='--ignore-submodules=dirty'
-    fi
-    if [[ "$DISABLE_UNTRACKED_FILES_DIRTY" == "true" ]]; then
-      FLAGS+='--untracked-files=no'
-    fi
-    STATUS=$(command git status ${FLAGS} 2> /dev/null | tail -n1)
-  fi
+  STATUS=$(command git status --porcelain --ignore-submodules=dirty 2> /dev/null | tail -n1)
+
   if [[ -n $STATUS ]]; then
     echo " *"
   else
@@ -38,14 +29,14 @@ prompt_precmd() {
     vcs_info
 
     if [[ -z ${vcs_info_msg_0_} ]]; then
-        PROMPT="%F{$(_prompt_color)}%3/%f$(_prompt_pipenv) $ "
+        PROMPT="$(_prompt_color)%3/%f$(_prompt_pipenv) $ "
     else
-        PROMPT="%F{$(_prompt_color)}%3/%f ("
+        PROMPT="$(_prompt_color)%3/%f ("
         PROMPT+='${vcs_info_msg_0_}'
         PROMPT+="$(_prompt_parse_git_dirty))$(_prompt_pipenv) $ "
     fi
 
-    RPROMPT="%F{7}%n@%M%f"
+    RPROMPT="%F{grey}%n@%M%f"
 }
 
 prompt_init() {
