@@ -29,6 +29,9 @@ super + bracket{left,right}
 
 # Preselection
 #
+super + ctrl + {Left,Down,Up,Right}
+    bspc node -p {west,south,north,east}
+
 super + ctrl + {1-9}
     bspc node -o 0.{1-9}
 
