@@ -11,3 +11,4 @@ do
 done
 
 MONITOR=$(polybar -m|tail -1|sed -e 's/:.*$//g') polybar -c ~/.config/polybar/config top &
+picom &
