@@ -1,5 +1,7 @@
 #!/usr/bin/zsh
 
+export WINIT_HIDPI_FACTOR=1
+
 setxkbmap gb -option compose:ralt
 sxhkd &
 
