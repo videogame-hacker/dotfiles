@@ -4,7 +4,7 @@ bspc config border_width 1
 bspc config window_gap 12
 
 for side in {top,bottom,left,right}; do
-    bspc config "${side}_padding" -6
+    bspc config "${side}_padding" -12
     bspc config "${side}_monocle_padding" 12
 done
 
