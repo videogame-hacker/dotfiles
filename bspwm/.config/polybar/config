@@ -12,7 +12,7 @@ font-1 = Noto Sans CJK KR:pixelsize=11:antialias=true;2
 
 modules-left = system-name bspwm
 modules-center = xwindow
-modules-right = date
+modules-right = volume date
 
 width = 100%
 height = 32
@@ -58,6 +58,15 @@ label-urgent-padding = 2
 type = internal/xwindow
 label-maxlen = 120
 
+[module/volume]
+type = internal/pulseaudio
+
+format-volume = <label-volume>
+format-muted = <label-muted>
+
+label-volume = Volume: %percentage%%
+label-muted = Volume: 0%
+label-muted-foreground = #9d989f
 
 [module/date]
 type = internal/date
