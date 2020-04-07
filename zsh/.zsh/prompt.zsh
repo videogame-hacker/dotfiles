@@ -36,7 +36,7 @@ prompt_precmd() {
         PROMPT+="$(_prompt_parse_git_dirty))$(_prompt_pipenv) $ "
     fi
 
-    RPROMPT="%F{grey}%n@%M%f"
+    RPROMPT="%F{grey}%F{7}%n@%M%f"
 }
 
 prompt_init() {
