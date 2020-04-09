@@ -14,7 +14,7 @@ For `hackery-upload`, you will need:
 For `hackery-screenshot`, you will need:
 
 - All the requirements of `hackery-upload`
-- `maim`
+- `shotgun`
 - `slop`
 - `imagemagick`'s `convert`
 - `xclip`

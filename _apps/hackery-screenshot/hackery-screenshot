@@ -3,7 +3,7 @@
 TMP_SHOT_FILE="/tmp/shot-$USER.png"
 
 rm "$TMP_SHOT_FILE" || true
-maim "$TMP_SHOT_FILE"
+shotgun "$TMP_SHOT_FILE"
 
 GEOMETRY=`slop`
 if [ ! "$GEOMETRY" ]; then
