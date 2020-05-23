@@ -11,6 +11,14 @@ then
     nvm () { source /usr/share/nvm/init-nvm.sh && nvm $@ }
 fi
 
+if [ -f "/usr/bin/opam" ]
+then
+    export PATH="$PATH:$HOME/.opam/default/bin"
+    opam () { eval "$(/usr/bin/opam env)" && /usr/bin/opam $@ }
+fi
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Editor and pager
 export EDITOR="vim"
 export VISUAL="less"
