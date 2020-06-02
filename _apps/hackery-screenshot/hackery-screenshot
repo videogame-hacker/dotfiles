@@ -3,25 +3,24 @@
 TMP_SHOT_FILE="/tmp/shot-$USER.png"
 
 rm "$TMP_SHOT_FILE" || true
-shotgun "$TMP_SHOT_FILE"
+# shotgun "$TMP_SHOT_FILE"
 
-GEOMETRY=`slop`
-if [ ! "$GEOMETRY" ]; then
-    rm "$TMP_SHOT_FILE"
-fi
+# GEOMETRY=`slop`
+# if [ ! "$GEOMETRY" ]; then
+#     rm "$TMP_SHOT_FILE"
+# fi
 
+maim -s "$TMP_SHOT_FILE"
 if [ -f "$TMP_SHOT_FILE" ]; then
-    convert "$TMP_SHOT_FILE" -crop $GEOMETRY "$TMP_SHOT_FILE.2"
+    # convert "$TMP_SHOT_FILE" -crop $GEOMETRY "$TMP_SHOT_FILE.2"
 
-    if [ -f "$TMP_SHOT_FILE.2" ]; then
-        timestamp=`date +"%Y/%m/%d/%H-%M-%S"`
-        screenshot_file="$HOME/Screenshots/$timestamp.png"
+    timestamp=`date +"%Y/%m/%d/%H-%M-%S"`
+    screenshot_file="$HOME/Screenshots/$timestamp.png"
 
-        mkdir -p `dirname $screenshot_file`
-        mv "$TMP_SHOT_FILE.2" "$screenshot_file"
-        result=`hackery-upload "$screenshot_file"`
-        uploaded_url="https://hackery.site/u/$result"
-        echo -n "$uploaded_url" | xclip -i -selection clipboard
-        notify-send -i "$screenshot_file" "Uploaded" "<u>$uploaded_url</u>"
-    fi
+    mkdir -p `dirname $screenshot_file`
+    mv "$TMP_SHOT_FILE" "$screenshot_file"
+    result=`hackery-upload "$screenshot_file"`
+    uploaded_url="https://hackery.site/u/$result"
+    echo -n "$uploaded_url" | xclip -i -selection clipboard
+    notify-send -i "$screenshot_file" "Uploaded" "<u>$uploaded_url</u>"
 fi
