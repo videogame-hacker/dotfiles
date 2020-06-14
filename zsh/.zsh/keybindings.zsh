@@ -50,3 +50,6 @@ bindkey '^H' backward-kill-word
 # bindkey '^?' backward-kill-word
 
 bindkey '^[[3;5~' kill-word
+
+bindkey '^M' accept-line
+bindkey '^J' accept-line
