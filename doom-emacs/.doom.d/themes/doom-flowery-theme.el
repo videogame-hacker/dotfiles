@@ -29,7 +29,7 @@ determine the exact padding."
    (fg         '("#fcf2f8" "#fcf2f8" "white"))
    (fg-alt     (doom-darken fg 0.4))
 
-   (grey       '("#505050" "#505050" "brightblack"))
+   (grey       '("#9d989f" "#9d989f" "brightblack"))
    (red        '("#fa5565" "#fa5565" "red"))
    (orange     '("#fb843b" "#fb843b" "brightred"))
    (yellow     '("#fafa64" "#fafa64" "yellow"))

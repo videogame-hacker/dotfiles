@@ -6,7 +6,7 @@ These are my configuration files for [DOOM Emacs](https://github.com/hlissner/do
 
 Once emacs is installed, you can run:
 
-> ```shell
+```shell
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 ```
