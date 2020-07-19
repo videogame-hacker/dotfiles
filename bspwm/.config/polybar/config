@@ -64,8 +64,8 @@ type = internal/pulseaudio
 format-volume = <label-volume>
 format-muted = <label-muted>
 
-label-volume = Volume: %percentage%%
-label-muted = Volume: 0%
+label-volume = "Volume: %percentage%% "
+label-muted = "Volume: 0% "
 label-muted-foreground = #9d989f
 
 [module/date]
