@@ -7,7 +7,7 @@ accent = #f07fbe
 monitor = ${env:MONITOR}
 wm-restack = bspwm
 
-font-0 = Cantarell:pixelsize=11:antialias=true;3
+font-0 = Inter:pixelsize=11:antialias=true;3
 font-1 = Noto Sans CJK KR:pixelsize=11:antialias=true;2
 
 modules-left = system-name bspwm
