@@ -10,7 +10,7 @@ wm-restack = bspwm
 font-0 = Inter:pixelsize=11:antialias=true;3
 font-1 = Noto Sans CJK KR:pixelsize=11:antialias=true;2
 
-modules-left = system-name bspwm
+modules-left = system-name bspwm music
 modules-center = xwindow
 modules-right = volume date
 
@@ -53,6 +53,9 @@ label-urgent = %name%
 label-urgent-foreground = ${colors.accent}
 label-urgent-padding = 2
 
+
+[module/music]
+type = internal/mpd
 
 [module/xwindow]
 type = internal/xwindow

@@ -14,7 +14,7 @@ super + shift + q
     bspc node -c
 
 super + {t,shift + t,s,f}
-    bspc node -t {tiled,psuedo_tiled,floating,fullscreen}
+    bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # Workspaces
 #
