@@ -25,12 +25,12 @@ padding-left = 3
 padding-right = 3
 module-margin = 1
 
-separator = %{F#${colors.accent}|%{F-}
+separator = " %{F#${colors.accent}|%{F-} "
 
 
 [module/system-name]
 type = custom/text
-content = "꽃 "
+content = "꽃"
 
 
 [module/bspwm]
@@ -67,8 +67,8 @@ type = internal/pulseaudio
 format-volume = <label-volume>
 format-muted = <label-muted>
 
-label-volume = "Volume: %percentage%% "
-label-muted = "Volume: 0% "
+label-volume = Volume: %percentage%%
+label-muted = Volume: 0%
 label-muted-foreground = #9d989f
 
 [module/date]
