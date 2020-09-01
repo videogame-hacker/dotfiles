@@ -3,10 +3,10 @@ env:
 
 window:
   padding:
-    x: 32
-    y: 32
+    x: 24
+    y: 24
 
-  dynamic_padding: false
+  dynamic_padding: true
 
 font:
   normal:
