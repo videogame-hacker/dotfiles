@@ -3,16 +3,17 @@ env:
 
 window:
   padding:
-    x: 24
-    y: 24
+    x: 16
+    y: 16
 
   dynamic_padding: true
 
 font:
   normal:
-    family: Fantasque Sans Mono
+    # family: Fantasque Sans Mono
+    family: Terminus
 
-  size: 13.5
+  size: 12
 
 scrolling:
   history: 10000
