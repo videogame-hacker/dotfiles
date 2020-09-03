@@ -1,11 +1,11 @@
 xsetroot -cursor_name left_ptr
 
 bspc config border_width 1
-bspc config window_gap 12
+bspc config window_gap 8
 
 for side in {top,bottom,left,right}; do
-    bspc config "${side}_padding" -6
-    bspc config "${side}_monocle_padding" 6
+    bspc config "${side}_padding" -4
+    bspc config "${side}_monocle_padding" 4
 done
 
 bspc config borderless_monocle true
