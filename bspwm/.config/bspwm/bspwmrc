@@ -1,5 +1,9 @@
 #!/usr/bin/zsh
 
+if [ -f ~/.Xresources ]; then
+    xrdb ~/.Xresources
+fi
+
 export WINIT_X11_SCALE_FACTOR=1
 
 setxkbmap gb -option compose:ralt
