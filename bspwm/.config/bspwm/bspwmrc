@@ -15,13 +15,15 @@ for f in $HOME/.config/bspwm/bspwmrc.d/*.sh; do
     source "$f"
 done
 
-if [ -d $HOME/.config/bspwm/bspwmrc.d/machine-specific/$(hostname)/ ]; then
-    for f in $HOME/.config/bspwm/bspwmrc.d/machine-specific/$(hostname)/*.sh; do
+hostname=$(</proc/sys/kernel/hostname)
+
+if [ -d $HOME/.config/bspwm/bspwmrc.d/machine-specific/$hostname/ ]; then
+    for f in $HOME/.config/bspwm/bspwmrc.d/machine-specific/$hostname/*.sh; do
         source "$f"
     done
 fi
 
 MONITOR=$(polybar -m|grep 'primary'|sed -e 's/:.*$//g') polybar -c ~/.config/polybar/config top &
 
-picom &
+picom -b &
 dunst &
