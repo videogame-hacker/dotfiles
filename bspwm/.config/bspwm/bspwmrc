@@ -21,7 +21,7 @@ if [ -d $HOME/.config/bspwm/bspwmrc.d/machine-specific/$(hostname)/ ]; then
     done
 fi
 
-MONITOR=$(polybar -m|tail -1|sed -e 's/:.*$//g') polybar -c ~/.config/polybar/config top &
+MONITOR=$(polybar -m|grep 'primary'|sed -e 's/:.*$//g') polybar -c ~/.config/polybar/config top &
 
 picom &
 dunst &
