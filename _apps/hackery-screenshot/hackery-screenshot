@@ -3,18 +3,13 @@
 TMP_SHOT_FILE="/tmp/shot-$USER.png"
 
 rm "$TMP_SHOT_FILE" || true
-# shotgun "$TMP_SHOT_FILE"
-
-# GEOMETRY=`slop`
-# if [ ! "$GEOMETRY" ]; then
-#     rm "$TMP_SHOT_FILE"
-# fi
 
 # maim -s "$TMP_SHOT_FILE"
-spectacle -rbno "$TMP_SHOT_FILE"
-if [ -f "$TMP_SHOT_FILE" ]; then
-    # convert "$TMP_SHOT_FILE" -crop $GEOMETRY "$TMP_SHOT_FILE.2"
+# spectacle -rbno "$TMP_SHOT_FILE"
 
+grim -g "$(slurp)" "$TMP_SHOT_FILE"
+
+if [ -f "$TMP_SHOT_FILE" ]; then
     timestamp=`date +"%Y/%m/%d/%H-%M-%S"`
     screenshot_file="$HOME/Screenshots/$timestamp.png"
 
