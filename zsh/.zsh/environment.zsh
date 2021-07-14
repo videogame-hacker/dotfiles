@@ -19,6 +19,8 @@ fi
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
+export GOPATH="$HOME/.go"
+
 # Editor and pager
 export EDITOR="vim"
 export VISUAL="less"
